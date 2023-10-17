@@ -1,5 +1,5 @@
  
-const socket = io('ws://');
+const socket = io('https://socketiopractice.onrender.com');
 
 
 const sendMessage = (event) => {
