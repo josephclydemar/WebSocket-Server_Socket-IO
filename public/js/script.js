@@ -1,5 +1,5 @@
  
-const socket = io('https://socketiopractice.onrender.com');
+const socket = io('https://thesis-socketio-server.onrender.com');
 
 
 const sendMessage = (event) => {
