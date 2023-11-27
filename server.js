@@ -45,8 +45,20 @@ const io = new Server(expressServer, {
 io.on('connection', (socket) => {
     console.log(`CONNECTED -> ${socket.id}`);
     socket.on('message', (data) => {
-        io.emit('message', `${socket.id}: ${data}`);
+        io.emit('message', `${data}`);
         console.log(`${socket.id}:${data}`);
+    });
+    socket.on('image_capture', (data) => {
+        io.emit('image_capture', `${data}`);
+        console.log(`${data}`);
+    });
+    socket.on('door_control', (data) => {
+        io.emit('door_control', `${data}`);
+        console.log(`${data}`);
+    });
+    socket.on('light_control', (data) => {
+        io.emit('light_control', `${data}`);
+        console.log(`${data}`);
     });
     socket.on('disconnect', () => {
         console.log(`DISCONNECTED -> ${socket.id}`);
