@@ -50,7 +50,9 @@ io.on('connection', (socket) => {
     });
     socket.on('image_capture', (data) => {
         io.emit('image_capture', `${data}`);
-        console.log(`${data}`);
+    });
+    socket.on('capture_image', (data) => {
+        io.emit('capture_image', `${data}`);
     });
     socket.on('door_control', (data) => {
         io.emit('door_control', `${data}`);
